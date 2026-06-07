@@ -76,21 +76,9 @@ crontab -e
  
 ---
  
-## 🗺️ Roadmap
- 
-- [x] CPU, memory, disk usage reporting
-- [x] Top 5 processes by CPU and memory
-- [x] Failed SSH login detection with IP tracking
-- [x] Color-coded output with visual progress bars
-- [ ] Email alerts when thresholds exceeded
-- [ ] JSON output mode for monitoring tool integration
-- [ ] Docker support for remote host monitoring
-- [ ] AWS CloudWatch integration
----
- 
 ## 👤 Author
  
-**Mark John Lloyd**
+**Mark John Lloyd Ncinas**
 - GitHub: [@loyditech](https://github.com/loyditech)
 ---
  
