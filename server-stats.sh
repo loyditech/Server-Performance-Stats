@@ -54,7 +54,7 @@ printf "  %-18s %s\n" "Load Avg:"  "$LOAD"
 # ── 2. CPU Usage ───────────────────────────────
 header " CPU USAGE"
 
-CPU_IDLE=$(top -bn1 | grep "Cpu(s)" | awk '{print $8}' | tr -d '%')
+CPU_IDLE=$(top -bn1 | grep -E "^(%Cpu|Cpu)" | awk '{for(i=1;i<=NF;i++) if($i~/^[0-9]/ && $(i+1)~/id/) print $i}' | tr -d ',')
 # Fallback for different top formats
 if [ -z "$CPU_IDLE" ]; then
   CPU_IDLE=$(top -bn1 | grep "%Cpu" | awk '{print $8}')
